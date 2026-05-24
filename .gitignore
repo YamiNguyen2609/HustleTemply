@@ -1,0 +1,11 @@
+## Build
+bin/
+obj/
+
+## Credentials
+credentials/*.json
+
+## IDE
+.vs/
+*.user
+appsettings.Development.json

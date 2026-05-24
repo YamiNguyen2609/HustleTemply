@@ -1,0 +1,43 @@
+@HustleTemply_HostAddress = http://localhost:5127
+@SheetId = 1smJGm0KeO0UxUlYckIHJXuTRs4QNr5DqsKrBgzW-Vgs
+
+GET {{HustleTemply_HostAddress}}/api/sheet-data
+Accept: application/json
+
+###
+
+GET {{HustleTemply_HostAddress}}/api/sheet-data/{{SheetId}}
+Accept: application/json
+
+###
+
+POST {{HustleTemply_HostAddress}}/api/sheet-data/copy-and-email
+Content-Type: application/json
+
+# Set Smtp:Enabled=true, Smtp:Username, and Smtp:AppPassword in appsettings or user secrets
+{
+  "sheetId": "{{SheetId}}",
+  "email": "your-email@example.com"
+}
+
+###
+
+GET {{HustleTemply_HostAddress}}/api/sheet-data/configurations
+Accept: application/json
+
+###
+
+GET {{HustleTemply_HostAddress}}/api/sheet-data/products
+Accept: application/json
+
+###
+
+GET {{HustleTemply_HostAddress}}/api/sheet-data/categories
+Accept: application/json
+
+###
+
+GET {{HustleTemply_HostAddress}}/api/sheet-data/socials
+Accept: application/json
+
+###
